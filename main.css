@@ -203,4 +203,34 @@ display: none;
   .nodeItem-epicPanorama .epicPanorama-overlay{
     left: -293.6px;
   }
+  .nodeItem-epicPanorama .sliderBarContainer {
+    bottom: 7%;
+  }
+  .first-interest {
+    left: 21%;
+  }
+  .second-interest {
+    left: -8.5%;
+  }
+  .third-interest {
+    left: -16%;
+  }
+  .fourth-interest {
+    left: 30%;
+  }
+  .fifth-interest {
+    left: 70%;
+  }
+  .sixth-interest {
+    left: 84%;
+  }
+  .seventh-interest {
+    left: 97%;
+  }
+  .eighth-interest {
+    left: 126%;
+  }
+  .ninth-interest {
+    left: 149%;
+  }
 }
