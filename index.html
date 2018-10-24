@@ -201,7 +201,11 @@
       top: 0;
       display: none;
     }
-
+    @media screen and (max-width:600px) {
+      .nodeItem-epicPanorama .epicPanorama-overlay {
+        left: -293.6px;
+      }
+    }
 
     </style>
   </head>
@@ -275,12 +279,25 @@
     <script type="text/javascript">
       // Create Draggable instance
       $(function() {
-        $( ".sliderHandle" ).draggable({
-          axis: 'x' ,
-          containment: 'parent',
-          drag: function( event, ui) {
-            $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 1.6);
-        }
+        $(window).on('resize', function () {
+          if($(this).width() <= 699) {
+            $( ".sliderHandle" ).draggable({
+              axis: 'x' ,
+              containment: 'parent',
+              drag: function( event, ui) {
+                $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 1);
+            }
+            });
+          }
+          else {
+            $( ".sliderHandle" ).draggable({
+              axis: 'x' ,
+              containment: 'parent',
+              drag: function( event, ui) {
+                $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 1.6);
+            }
+            });
+          }
         });
 
         // popUp functions
