@@ -46,6 +46,7 @@
   z-index: 2;
   height: 100%;
   width: 100%;
+  left: -539.2px;
 }
 .nodeItem-epicPanorama.active .epicPanorama-base, .nodeItem-epicPanorama.active .nodeItem {
   opacity: 1.0;
