@@ -75,13 +75,26 @@
     <script type="text/javascript">
       // Create Draggable instance
       $(function() {
-        $( ".sliderHandle" ).draggable({
-          axis: 'x' ,
-          containment: 'parent',
-          drag: function( event, ui) {
-//             $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 1.6);
-            $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 1.6);
-        }
+        $(window).on('resize', function(){
+            var win = $(this); //this = window
+            if (win.height() >= 820) { /* ... */ }
+            if (win.width() >= 1400) {
+              $( ".sliderHandle" ).draggable({
+                axis: 'x' ,
+                containment: 'parent',
+                drag: function( event, ui) {
+                  $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 3);
+              }
+              });
+            }else {
+              $( ".sliderHandle" ).draggable({
+                axis: 'x' ,
+                containment: 'parent',
+                drag: function( event, ui) {
+                  $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 1.6);
+              }
+              });
+            }
         });
 
         // popUp functions
