@@ -196,6 +196,12 @@ top: 0;
 display: none;
 }
 
+@media(min-width: 1400px){
+  .nodeItem-epicPanorama img {
+    width: 165%;
+  }
+}
+
 @media(min-width: 769px) and (max-width: 1030px)
 {
   .epicPanorama-base {
