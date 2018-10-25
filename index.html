@@ -79,7 +79,13 @@
           axis: 'x' ,
           containment: 'parent',
           drag: function( event, ui) {
-            $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 3);
+            $(window).on('resize', function(){
+                  var win = $(this); //this = window
+                  if (win.width() >= 1400) {
+                    $('.epicPanorama-base').css('left',((($('.sliderHandle').position().left)) * -1.6) + 265.5 * 3);
+                  }
+            });
+            
         }
         });
         // popUp functions
